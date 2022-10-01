@@ -39,15 +39,15 @@ void fig_1_10(const std::vector<ImagePtr>& image_vector) {
   tbb::flow::graph g;
 
   int i = 0;
-  tbb::flow::source_node<ImagePtr> src(g, 
-    [&i, &image_vector] (ImagePtr& out) -> bool {
+  tbb::flow::input_node<ImagePtr> src(g, 
+    [&]( oneapi::tbb::flow_control &fc ) -> ImagePtr {
       if ( i < image_vector.size() ) {
-        out = image_vector[i++];
-        return true;
+        return image_vector[i++];
       } else {
-        return false;
+        fc.stop();
+        return {};
       }
-    }, false);
+    });
 
   tbb::flow::function_node<ImagePtr, ImagePtr> gamma(g, 
     tbb::flow::unlimited,
@@ -137,8 +137,10 @@ int main(int argc, char* argv[]) {
   for ( int i = 2000; i < 20000000; i *= 10 ) 
     image_vector.push_back(ch01::makeFractalImage(i));
 
+  int num_threads = tbb::info::default_concurrency();
+
   // warmup the scheduler
-  tbb::parallel_for(0, tbb::task_scheduler_init::default_num_threads(), [](int) {
+  tbb::parallel_for(0, num_threads, [](int) {
     tbb::tick_count t0 = tbb::tick_count::now();
     while ((tbb::tick_count::now() - t0).seconds() < 0.01);
   });
