@@ -31,7 +31,7 @@ SPDX-License-Identifier: MIT
 
 int fig_2_10(const std::vector<int>& a) {
   int max_value = tbb::parallel_reduce(
-    /* the range = */ tbb::blocked_range<int>(0, a.size()), 
+    /* the range = */ tbb::blocked_range<int>(0, (int)a.size()), 
     /* identity = */ std::numeric_limits<int>::min(),
     /* func = */ 
     [&](const tbb::blocked_range<int>& r, int init) -> int {
@@ -57,7 +57,7 @@ int serialImpl(const std::vector<int>& a) {
 }
 
 static void warmupTBB() {
-  tbb::parallel_for(0, tbb::task_scheduler_init::default_num_threads(), [](int) {
+  tbb::parallel_for(0, tbb::info::default_concurrency(), [](int) {
     tbb::tick_count t0 = tbb::tick_count::now();
     while ((tbb::tick_count::now() - t0).seconds() < 0.01);
   });
