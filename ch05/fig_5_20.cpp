@@ -28,8 +28,8 @@ SPDX-License-Identifier: MIT
 #include <random>
 #include <tbb/tick_count.h>
 #include <tbb/parallel_for.h>
-#include <tbb/task_scheduler_init.h>
-#include <tbb/atomic.h>
+#include <tbb/task_arena.h>
+#include <atomic>
 
 int main(int argc, char** argv) {
 
@@ -50,7 +50,7 @@ int main(int argc, char** argv) {
   // Initialize histogram
   std::vector<int> hist(num_bins);
 
-  tbb::task_scheduler_init init{nth};
+  tbb::task_arena init{nth};
 
   // Serial execution
   tbb::tick_count t0 = tbb::tick_count::now();
@@ -60,7 +60,7 @@ int main(int argc, char** argv) {
   double t_serial = (t1 - t0).seconds();
 
   // Parallel execution
-  std::vector<tbb::atomic<int>> hist_p(num_bins);
+  std::vector<std::atomic<int>> hist_p(num_bins);
   t0 = tbb::tick_count::now();
   parallel_for(tbb::blocked_range<size_t>{0, image.size()},
               [&](const tbb::blocked_range<size_t>& r)

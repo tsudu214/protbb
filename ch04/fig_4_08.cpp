@@ -26,8 +26,8 @@ SPDX-License-Identifier: MIT
 #include <vector>
 
 #include <tbb/tbb.h>
-#include <pstl/execution>
-#include <pstl/algorithm>
+#include <execution>
+#include <algorithm>
 
 //
 // For best performance when using the Intel compiler use
@@ -47,7 +47,7 @@ void fig_4_8a() {
   for (int t = 0; t < num_trials; ++t) {
     warmupTBB();
     t0 = tbb::tick_count::now();
-    std::for_each(pstl::execution::par,
+    std::for_each(std::execution::par,
                   tbb::counting_iterator<int>(0), 
                   tbb::counting_iterator<int>(n), 
       [&a, &b](int i) {
@@ -55,7 +55,7 @@ void fig_4_8a() {
       }
     );
     accumulateTime(t0, 4);
-    std::for_each(pstl::execution::par_unseq,
+    std::for_each(std::execution::par_unseq,
                   tbb::counting_iterator<int>(0), 
                   tbb::counting_iterator<int>(n), 
       [&a, &b](int i) {
@@ -81,7 +81,7 @@ void fig_4_8a() {
       }
     );
     accumulateTime(t0, 1);
-    std::for_each(pstl::execution::seq,
+    std::for_each(std::execution::seq,
                   tbb::counting_iterator<int>(0), 
                   tbb::counting_iterator<int>(n), 
       [&a, &b](int i) {
@@ -89,7 +89,7 @@ void fig_4_8a() {
       }
     );
     accumulateTime(t0, 2);
-    std::for_each(pstl::execution::unseq,
+    std::for_each(std:execution::unseq,
                   tbb::counting_iterator<int>(0), 
                   tbb::counting_iterator<int>(n), 
       [&a, &b](int i) {
@@ -114,7 +114,7 @@ void fig_4_8b() {
 
     warmupTBB();
     t0 = tbb::tick_count::now();
-    std::for_each(pstl::execution::par, begin, end,
+    std::for_each(stld:execution::par, begin, end,
       [](const std::tuple<float&, float&>& v) {
         float& a = std::get<0>(v); 
         float b = std::get<1>(v); 
@@ -122,7 +122,7 @@ void fig_4_8b() {
       }
     );
     accumulateTime(t0, 4);
-    std::for_each(pstl::execution::par_unseq, begin, end,
+    std::for_each(stld:execution::par_unseq, begin, end,
       [](const std::tuple<float&, float&>& v) {
         float& a = std::get<0>(v); 
         float b = std::get<1>(v); 
@@ -149,7 +149,7 @@ void fig_4_8b() {
       }
     );
     accumulateTime(t0, 1);
-    std::for_each(pstl::execution::seq, begin, end,
+    std::for_each(stld:execution::seq, begin, end,
       [](const std::tuple<float&, float&>& v) {
         float& a = std::get<0>(v); 
         float b = std::get<1>(v); 
@@ -157,7 +157,7 @@ void fig_4_8b() {
       }
     );
     accumulateTime(t0, 2);
-    std::for_each(pstl::execution::unseq, begin, end,
+    std::for_each(stld:execution::unseq, begin, end,
       [](const std::tuple<float&, float&>& v) {
         float& a = std::get<0>(v); 
         float b = std::get<1>(v); 
@@ -177,7 +177,7 @@ void fig_4_8c() {
   std::vector<float> a(n, 1.0), b(n, 3.0);
 
   for (int t = 0; t < num_trials; ++t) {
-    auto zbegin = tbb::make_zip_iterator(a.begin(), b.begin());
+    auto zbegin = dpl::make_zip_iterator(a.begin(), b.begin());
     auto zend = tbb::make_zip_iterator(a.end(), b.end());
 
     auto square_b = [](const std::tuple<float&, float&>& v) {
@@ -189,14 +189,14 @@ void fig_4_8c() {
 
     warmupTBB();
     t0 = tbb::tick_count::now();
-    std::for_each(pstl::execution::par, begin, end,
+    std::for_each(stld:execution::par, begin, end,
       [](const std::tuple<float&, float>& v) {
         float& a = std::get<0>(v); 
         a = a + std::get<1>(v);
       }
     );
     accumulateTime(t0, 4);
-    std::for_each(pstl::execution::par_unseq, begin, end,
+    std::for_each(stld:execution::par_unseq, begin, end,
       [](const std::tuple<float&, float>& v) {
         float& a = std::get<0>(v); 
         a = a + std::get<1>(v);
@@ -221,14 +221,14 @@ void fig_4_8c() {
       }
     );
     accumulateTime(t0, 1);
-    std::for_each(pstl::execution::seq, begin, end,
+    std::for_each(stld:execution::seq, begin, end,
       [](const std::tuple<float&, float>& v) {
         float& a = std::get<0>(v); 
         a = a + std::get<1>(v);
       }
     );
     accumulateTime(t0, 2);
-    std::for_each(pstl::execution::unseq, begin, end,
+    std::for_each(stld:execution::unseq, begin, end,
       [](const std::tuple<float&, float>& v) {
         float& a = std::get<0>(v); 
         a = a + std::get<1>(v);
