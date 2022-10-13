@@ -26,21 +26,23 @@ SPDX-License-Identifier: MIT
 #include <iostream>
 #include <algorithm>
 
+#include <atomic>
+#include <tbb/tick_count.h>
 #include <tbb/parallel_for.h>
 #include <tbb/blocked_range.h>
-#include <tbb/task_scheduler_init.h>
+#include <tbb/task_arena.h>
 #include <tbb/cache_aligned_allocator.h>
 #include <tbb/enumerable_thread_specific.h>
 #include <tbb/parallel_reduce.h>
 #include <tbb/combinable.h>
-#include <tbb/queuing_mutex.h>
+#include <mutex>
 
 int main(int argc, char** argv) {
   size_t N = 1000000000;
   int nth = 2;
 
   std::cout<<"Par_count with N: " << N << " and nth: "<< nth <<std::endl;
-  tbb::task_scheduler_init init{nth};
+  tbb::task_arena init{nth};
 
   //for (int test = 0; test < 10 ; ++test)
   //{
@@ -74,14 +76,12 @@ int main(int argc, char** argv) {
   std::cout << "\tSpeedup: " << t_s/t_p << std::endl;
 
   // Parallel execution (coarse)
-  //using myMutex_t = spin_mutex;
-  using my_mutex_t = tbb::queuing_mutex;
-  my_mutex_t my_mutex;
+  std::mutex my_mutex;
   t0_p = tbb::tick_count::now();
   sum_g = 0;
   parallel_for(tbb::blocked_range<size_t>{0, N},
     [&](const tbb::blocked_range<size_t>& r){
-      my_mutex_t::scoped_lock mylock{my_mutex};
+      std::unique_lock<std::mutex> mylock{my_mutex};
       for(int i=r.begin(); i<r.end(); ++i) sum_g+=vec[i];
     });//,tbb::auto_partitioner());
   t1_p = tbb::tick_count::now();
@@ -98,7 +98,7 @@ int main(int argc, char** argv) {
     [&](const tbb::blocked_range<size_t>& r)
     {
       for(int i=r.begin(); i<r.end(); ++i) {
-        my_mutex_t::scoped_lock mylock{my_mutex};
+        std::unique_lock<std::mutex> mylock{my_mutex};
         sum_g+=vec[i];}
     });//,tbb::auto_partitioner());
   t1_p = tbb::tick_count::now();
@@ -111,7 +111,7 @@ int main(int argc, char** argv) {
 
   // Parallel execution (atomic)
   t0_p = tbb::tick_count::now();
-  tbb::atomic<long long> sum_a{0};
+  std::atomic<long long> sum_a{0};
   parallel_for(tbb::blocked_range<size_t>{0, N},
     [&](const tbb::blocked_range<size_t>& r)
     {

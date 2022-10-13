@@ -13,114 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\chap01">
+      <UniqueIdentifier>{a0a0acb8-fb2b-4c66-89a1-131f78ffeb2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chap02">
+      <UniqueIdentifier>{74d15be8-4f97-4091-ac67-b9238ff2740c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chap03">
+      <UniqueIdentifier>{4e73f094-4457-48dd-a68a-2bd1864dfe5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chap04">
+      <UniqueIdentifier>{5de58401-ce52-421c-96c8-96e1c5bd35a3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\ch01\fig_1_04.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch01\fig_1_05.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch01\fig_1_07.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch01\fig_1_10.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch01\fig_1_11.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_03.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_04.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_05.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_06.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_07.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_08.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="..\ch02\sidebar_associativity.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_10.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_11.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_12.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_14.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_15.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_16.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_17.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_18.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_19.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_20.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_22.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_23.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_24.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_27.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch02\fig_2_30.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch03\fig_3_03.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch03\fig_3_05.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch03\fig_3_06.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch03\fig_3_10.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch03\fig_3_12.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch03\fig_3_14.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch03\fig_3_16.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch04\fig_4_04.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ch04\fig_4_08.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="..\ch05\fig_5_03.cpp">
@@ -139,6 +46,132 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="..\ch05\fig_5_20.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch05\fig_5_22.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch05\fig_5_23.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch05\fig_5_24.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch05\fig_5_25.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch05\fig_5_26.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch01\fig_1_04.cpp">
+      <Filter>ソース ファイル\chap01</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch01\fig_1_05.cpp">
+      <Filter>ソース ファイル\chap01</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch01\fig_1_07.cpp">
+      <Filter>ソース ファイル\chap01</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch01\fig_1_10.cpp">
+      <Filter>ソース ファイル\chap01</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch01\fig_1_11.cpp">
+      <Filter>ソース ファイル\chap01</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_03.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_04.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_05.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_06.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_07.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_08.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_10.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_11.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_12.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_14.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_15.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_16.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_17.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_18.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_19.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_20.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_22.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_23.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_24.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_27.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch02\fig_2_30.cpp">
+      <Filter>ソース ファイル\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch03\fig_3_03.cpp">
+      <Filter>ソース ファイル\chap03</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch03\fig_3_05.cpp">
+      <Filter>ソース ファイル\chap03</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch03\fig_3_06.cpp">
+      <Filter>ソース ファイル\chap03</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch03\fig_3_10.cpp">
+      <Filter>ソース ファイル\chap03</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch03\fig_3_12.cpp">
+      <Filter>ソース ファイル\chap03</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch03\fig_3_14.cpp">
+      <Filter>ソース ファイル\chap03</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch03\fig_3_16.cpp">
+      <Filter>ソース ファイル\chap03</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch04\fig_4_04.cpp">
+      <Filter>ソース ファイル\chap04</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch04\fig_4_08.cpp">
+      <Filter>ソース ファイル\chap04</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch05\fig_5_27.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch05\fig_5_29.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
