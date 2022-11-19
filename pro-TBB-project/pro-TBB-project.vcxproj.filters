@@ -31,6 +31,9 @@
     <Filter Include="ソース ファイル\chap06">
       <UniqueIdentifier>{62a91d0c-ba26-442e-9bbf-ae9154f9f731}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chap07">
+      <UniqueIdentifier>{b75db058-4bad-4529-b792-64a580ede78f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\ch02\sidebar_associativity.cpp">
@@ -197,6 +200,9 @@
     </ClCompile>
     <ClCompile Include="..\ch06\fig_6_12.cpp">
       <Filter>ソース ファイル\chap06</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ch07\fig_7_09.cpp">
+      <Filter>ソース ファイル\chap07</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

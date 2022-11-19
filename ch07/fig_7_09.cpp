@@ -28,7 +28,7 @@ SPDX-License-Identifier: MIT
 
 const int N = 100000;
 
-#define SM
+//#define SM
 
 #ifdef SM
 std::shared_ptr<double> a[N];
